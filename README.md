@@ -13,6 +13,16 @@ Additionally, this project includes an implementation of a **Techem Radio 4** pr
 -   CC1101 transceiver module @ 868 MHz
 -   Antenna for the CC1101 module
 
+## Schematic
+
+EPS32 <-> CC1101
+GPIO 23 - MOSI
+GPIO 18 - SCK
+GPIO 19 - MISO
+GPIO 4  - GDO2
+GPIO 17 - GDO0
+GPIO 5  - CS
+
 ## Software Requirements
 
 -   PlatformIO IDE
