@@ -15,13 +15,19 @@ Additionally, this project includes an implementation of a **Techem Radio 4** pr
 
 ## Schematic
 
-EPS32 <-> CC1101
-GPIO 23 - MOSI
-GPIO 18 - SCK
-GPIO 19 - MISO
-GPIO 4  - GDO2
-GPIO 17 - GDO0
-GPIO 5  - CS
+### ESP32 ↔ CC1101 Connections
+
+| ESP32 GPIO | CC1101 Pin | Description        |
+|-----------:|------------|--------------------|
+| GPIO 23    | MOSI       | SPI MOSI           |
+| GPIO 19    | MISO       | SPI MISO           |
+| GPIO 18    | SCK        | SPI Clock          |
+| GPIO 5     | CS         | SPI Chip Select    |
+| GPIO 17    | GDO0       | Interrupt / Data   |
+| GPIO 4     | GDO2       | Interrupt / Status |
+
+> **Note:**  
+> The CC1101 module operates at **3.3V**. Do **not** connect it to 5V, as this may permanently damage the transceiver.
 
 ## Software Requirements
 
