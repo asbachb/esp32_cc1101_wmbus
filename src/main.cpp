@@ -6,7 +6,7 @@
 #include <3outof6.h>
 #include <mbus_packet.h>
 
-#define CC1101_GDO0 17
+#define CC1101_GDO0 5
 #define CC1101_GDO2 4
 
 const char *cold_meter_id = "00112233";
@@ -237,8 +237,7 @@ void setup()
 
   SPI.begin(); // Initialize SPI interface
 
-  // Disable WiFi
-  WiFi.disconnect(true);
+  // Disable WiFi (avoid calling disconnect before WiFi driver init)
   WiFi.mode(WIFI_OFF);
 
   Serial.println("Start!");
